@@ -91,6 +91,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		625BB768264A8F0A00E9CDFD /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				6268B6B72649A9EC009A3743 /* AddAccount.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		625BB769264A8F1E00E9CDFD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6268B6B92649AC2F009A3743 /* AccountModel.swift */,
+				625BB762264A8C3F00E9CDFD /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		625BB76A264A8F2600E9CDFD /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				625BB764264A8D7900E9CDFD /* RemoteAddAccount.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		625BB76B264A8F2F00E9CDFD /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				625BB766264A8DC600E9CDFD /* HttpPostClient.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		625BB76C264A8F5200E9CDFD /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				6268B7192649B2C8009A3743 /* RemoteAddAccountTest.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		6268B68F2649A5EB009A3743 = {
 			isa = PBXGroup;
 			children = (
@@ -115,9 +156,8 @@
 		6268B6B02649A73E009A3743 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				6268B6B72649A9EC009A3743 /* AddAccount.swift */,
-				6268B6B92649AC2F009A3743 /* AccountModel.swift */,
-				625BB762264A8C3F00E9CDFD /* Model.swift */,
+				625BB768264A8F0A00E9CDFD /* UseCases */,
+				625BB769264A8F1E00E9CDFD /* Models */,
 				6268B6B22649A73E009A3743 /* Info.plist */,
 			);
 			path = Domain;
@@ -133,8 +173,8 @@
 		6268B70D2649B2C8009A3743 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				625BB764264A8D7900E9CDFD /* RemoteAddAccount.swift */,
-				625BB766264A8DC600E9CDFD /* HttpPostClient.swift */,
+				625BB76A264A8F2600E9CDFD /* UseCases */,
+				625BB76B264A8F2F00E9CDFD /* Http */,
 				6268B70F2649B2C8009A3743 /* Info.plist */,
 			);
 			path = Data;
@@ -143,7 +183,7 @@
 		6268B7182649B2C8009A3743 /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				6268B7192649B2C8009A3743 /* RemoteAddAccountTest.swift */,
+				625BB76C264A8F5200E9CDFD /* UseCases */,
 				6268B71B2649B2C8009A3743 /* Info.plist */,
 			);
 			path = DataTests;
