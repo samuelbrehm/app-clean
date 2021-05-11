@@ -28,12 +28,9 @@ protocol HttpPostClient {
 }
 
 class RemoteAddAccountTests: XCTestCase {
-
     func test_add_should_call_httpClient_with_correct_url() throws {
         let url = URL(string: "http://any-url.com")!
-        let httpClientSpy = HttpClientSpy()
-        let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
-        
+        let (sut, httpClientSpy) = makeSut(url: url)
         let addAccountModel = makeAddAccountModel()
         sut.add(addAccountModel: addAccountModel)
         
@@ -41,9 +38,7 @@ class RemoteAddAccountTests: XCTestCase {
     }
     
     func test_add_should_call_httpClient_with_correct_data() throws {
-        let url = URL(string: "http://any-url.com")!
-        let httpClientSpy = HttpClientSpy()
-        let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
+        let (sut, httpClientSpy) = makeSut()
         let addAccountModel = makeAddAccountModel()
         sut.add(addAccountModel: addAccountModel)
         
@@ -53,6 +48,12 @@ class RemoteAddAccountTests: XCTestCase {
 }
 
 extension RemoteAddAccountTests {
+    func makeSut(url: URL = URL(string: "http://any-url.com")!) -> (RemoteAddAccount, httpClientSpy: HttpClientSpy) {
+        let httpClientSpy = HttpClientSpy()
+        let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
+        return (sut, httpClientSpy)
+    }
+    
     func makeAddAccountModel() -> AddAccountModel {
         AddAccountModel(name: "any_name", email: "any_email@mail.com", password: "any_password", passwordConfirmation: "any_password")
     }
