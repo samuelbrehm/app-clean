@@ -1,5 +1,12 @@
 import XCTest
 
+struct SignUpViewModel {
+    var name: String?
+    var email: String?
+    var password: String?
+    var passwordConfirmation: String?
+}
+
 class SignUpPresenter {
     private var alertView: AlertView
     
@@ -9,7 +16,11 @@ class SignUpPresenter {
     
     func signup(viewModel: SignUpViewModel) {
         if viewModel.name == nil || viewModel.name!.isEmpty {
-            alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: "O campo é obriagatório"))
+            alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: "O campo Nome é obriagatório"))
+        }
+        
+        if viewModel.email == nil || viewModel.email!.isEmpty {
+            alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: "O campo Email é obriagatório"))
         }
     }
 }
@@ -23,19 +34,19 @@ struct AlertViewModel: Equatable {
     var message: String
 }
 
-struct SignUpViewModel {
-    var name: String?
-    var email: String?
-    var password: String?
-    var passwordConfirmation: String?
-}
-
 class SignUpPresenterTests: XCTestCase {
     func test_signup_should_show_error_message_if_name_is_not_provided() {
         let (sut, alertViewSpy) = makeSut()
         let signUpViewModel = SignUpViewModel(email: "any_email@mail.com", password: "any_password", passwordConfirmation: "any_password")
         sut.signup(viewModel: signUpViewModel)
-        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validação", message: "O campo é obriagatório"))
+        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validação", message: "O campo Nome é obriagatório"))
+    }
+    
+    func test_signup_should_show_error_message_if_email_is_not_provided() {
+        let (sut, alertViewSpy) = makeSut()
+        let signUpViewModel = SignUpViewModel(name: "any_name", password: "any_password", passwordConfirmation: "any_password")
+        sut.signup(viewModel: signUpViewModel)
+        XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Falha na validação", message: "O campo Email é obriagatório"))
     }
 }
 
