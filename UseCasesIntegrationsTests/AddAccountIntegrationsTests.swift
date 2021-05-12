@@ -1,9 +1,9 @@
-import XCTest
-import Data
-import Infra
-import Domain
-
-class AddAccountIntegrationsTests: XCTestCase {
+//import XCTest
+//import Data
+//import Infra
+//import Domain
+//
+//class AddAccountIntegrationsTests: XCTestCase {
 //    func test_add_account() throws {
 //        let alamofireAdapter = AlamofireAdapter()
 //        let url = URL(string: "http://clean-node-api.herokuapp.com/api/signup")!
@@ -22,4 +22,4 @@ class AddAccountIntegrationsTests: XCTestCase {
 //        }
 //        wait(for: [exp], timeout: 5)
 //    }
-}
+//}
