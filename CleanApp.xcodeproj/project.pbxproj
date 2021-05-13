@@ -41,6 +41,7 @@
 		6268B71A2649B2C8009A3743 /* RemoteAddAccountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6268B7192649B2C8009A3743 /* RemoteAddAccountTest.swift */; };
 		6268B7232649B2D9009A3743 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6268B6AF2649A73E009A3743 /* Domain.framework */; };
 		6268B7242649B2D9009A3743 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6268B6AF2649A73E009A3743 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		62E158F6264D334300B6C4CE /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625BB77D264AD4E800E9CDFD /* AccountModelFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -834,6 +835,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E158F6264D334300B6C4CE /* AccountModelFactory.swift in Sources */,
 				62297836264C460900A475E4 /* SignUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
