@@ -66,7 +66,7 @@ class SignUpPresenterTests: XCTestCase {
     func test_signup_should_show_error_message_if_invalid_email_is_provided() {
         let alertViewSpy = AlertViewSpy()
         let emailValidatorSpy = EmailValidatorSpy()
-        let sut = makeSut(alertView: alertViewSpy, emailValidator: emailValidatorSpy)        
+        let sut = makeSut(alertView: alertViewSpy, emailValidator: emailValidatorSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { [weak self] viewModel in
             XCTAssertEqual(viewModel, self?.makeRequiredInvalidViewModel(fieldName: "Email"))
@@ -108,8 +108,9 @@ class SignUpPresenterTests: XCTestCase {
 }
 
 extension SignUpPresenterTests {
-    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy()) -> SignUpPresenter {
+    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy(), file: StaticString = #filePath, line: UInt = #line) -> SignUpPresenter {
         let sut = SignUpPresenter(alertView: alertView, emailValidator: emailValidator, addAccount: addAccount)
+        checkMemoryLeak(for: sut, file: file, line: line)
         return sut
     }
     
