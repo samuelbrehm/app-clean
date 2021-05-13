@@ -56,7 +56,7 @@ class SignUpPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { [weak self] viewModel in
-            XCTAssertEqual(viewModel, self?.makeRequiredInvalidViewModel(fieldName: "Confirmar Senha"))
+            XCTAssertEqual(viewModel, self?.makeInvalidViewModel(fieldName: "Confirmar Senha"))
             exp.fulfill()
         }
         sut.signup(viewModel: makeSignUpViewModel(passwordConfirmation: "wrong_password"))
@@ -69,7 +69,7 @@ class SignUpPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy, emailValidator: emailValidatorSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { [weak self] viewModel in
-            XCTAssertEqual(viewModel, self?.makeRequiredInvalidViewModel(fieldName: "Email"))
+            XCTAssertEqual(viewModel, self?.makeInvalidViewModel(fieldName: "Email"))
             exp.fulfill()
         }
         emailValidatorSpy.simulateInvalidEmail()
@@ -98,7 +98,7 @@ class SignUpPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy, addAccount: addAccountSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { [weak self] viewModel in
-            XCTAssertEqual(viewModel, self?.makeErrorViewModel(message: "Algo inesperado aconteceu, tente novamente em alguns instantes"))
+            XCTAssertEqual(viewModel, self?.makeErrorAlertViewModel(message: "Algo inesperado aconteceu, tente novamente em alguns instantes"))
             exp.fulfill()
         }
         sut.signup(viewModel: makeSignUpViewModel())
@@ -127,6 +127,20 @@ class SignUpPresenterTests: XCTestCase {
         addAccountSpy.completeWithError(.unexpected)
         wait(for: [exp2], timeout: 1)
     }
+    
+    func test_signup_should_show_success_message_if_addAccount_succeeds() {
+        let alertViewSpy = AlertViewSpy()
+        let addAccountSpy = AddAccountSpy()
+        let sut = makeSut(alertView: alertViewSpy, addAccount: addAccountSpy)
+        let exp = expectation(description: "waiting")
+        alertViewSpy.observe { [weak self] viewModel in
+            XCTAssertEqual(viewModel, self?.makeSuccessAlertViewModel(message: "Conta criada com sucesso."))
+            exp.fulfill()
+        }
+        sut.signup(viewModel: makeSignUpViewModel())
+        addAccountSpy.completeWithAccount(makeAccountModel())
+        wait(for: [exp], timeout: 1)
+    }
 }
 
 // MARK: - EXTENSION
@@ -146,12 +160,16 @@ extension SignUpPresenterTests {
         return AlertViewModel(title: "Falha na validação", message: "O campo \(fieldName) é obriagatório")
     }
     
-    func makeRequiredInvalidViewModel(fieldName: String) -> AlertViewModel {
+    func makeInvalidViewModel(fieldName: String) -> AlertViewModel {
         return AlertViewModel(title: "Falha na validação", message: "O campo \(fieldName) é inválido")
     }
     
-    func makeErrorViewModel(message: String) -> AlertViewModel {
+    func makeErrorAlertViewModel(message: String) -> AlertViewModel {
         return AlertViewModel(title: "Erro", message: message)
+    }
+    
+    func makeSuccessAlertViewModel(message: String) -> AlertViewModel {
+        return AlertViewModel(title: "Sucesso", message: message)
     }
     
     class AlertViewSpy: AlertView {
@@ -191,6 +209,10 @@ extension SignUpPresenterTests {
         
         func completeWithError(_ error: DomainError) {
             completion?(.failure(error))
+        }
+        
+        func completeWithAccount(_ accountModel: AccountModel) {
+            completion?(.success(accountModel))
         }
     }
     
