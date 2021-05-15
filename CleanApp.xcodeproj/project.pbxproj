@@ -47,6 +47,7 @@
 		627BABD726501BBC00CE9319 /* Presentaion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62297828264C460900A475E4 /* Presentaion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		627BABDC26503AAB00CE9319 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627BABDB26503AAB00CE9319 /* SignUpViewController.swift */; };
 		627BABDE26503AF000CE9319 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627BABDD26503AF000CE9319 /* SignUp.storyboard */; };
+		627BABE526505CA500CE9319 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627BABE426505CA500CE9319 /* TestExtensions.swift */; };
 		62D13347264DACEB00E0EE50 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D13346264DACEB00E0EE50 /* SignUpViewModel.swift */; };
 		62D13349264DAD9600E0EE50 /* SignUpMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D13348264DAD9600E0EE50 /* SignUpMapper.swift */; };
 		62D1334D264DBC0200E0EE50 /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D1334C264DBC0200E0EE50 /* AlertViewSpy.swift */; };
@@ -231,6 +232,7 @@
 		627BABCE26501A0000CE9319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		627BABDB26503AAB00CE9319 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		627BABDD26503AF000CE9319 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		627BABE426505CA500CE9319 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		62D13346264DACEB00E0EE50 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		62D13348264DAD9600E0EE50 /* SignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMapper.swift; sourceTree = "<group>"; };
 		62D1334C264DBC0200E0EE50 /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
@@ -589,6 +591,7 @@
 		627BABCB26501A0000CE9319 /* UI-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				627BABE326505C8500CE9319 /* Helpers */,
 				627BABE226505C5E00CE9319 /* Scenes */,
 				627BABCE26501A0000CE9319 /* Info.plist */,
 			);
@@ -626,6 +629,14 @@
 				627BABE026505C1600CE9319 /* SignUp */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		627BABE326505C8500CE9319 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				627BABE426505CA500CE9319 /* TestExtensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		62D13345264DACCA00E0EE50 /* SignUp */ = {
@@ -1166,6 +1177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				627BABCD26501A0000CE9319 /* SignUpViewControllerTests.swift in Sources */,
+				627BABE526505CA500CE9319 /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
