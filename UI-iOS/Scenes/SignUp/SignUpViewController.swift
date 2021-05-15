@@ -10,10 +10,12 @@ final class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
     
+    
     var signUp: ((SignUpViewModel) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveButton?.layer.cornerRadius = 5
         configure()
     }
     
