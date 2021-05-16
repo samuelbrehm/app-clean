@@ -58,6 +58,7 @@
 		62E158F6264D334300B6C4CE /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625BB77D264AD4E800E9CDFD /* AccountModelFactory.swift */; };
 		62E158F7264D97F900B6C4CE /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625BB776264AD38200E9CDFD /* TestExtensions.swift */; };
 		62E158F9264D9BF200B6C4CE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E158F8264D9BF200B6C4CE /* LoadingView.swift */; };
+		62FBCA4226514DAE00B5AE8A /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBCA4126514DAE00B5AE8A /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,6 +242,7 @@
 		62D13355264DBD1E00E0EE50 /* LoadingViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewSpy.swift; sourceTree = "<group>"; };
 		62D13358264DBE5A00E0EE50 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		62E158F8264D9BF200B6C4CE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		62FBCA4126514DAE00B5AE8A /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -582,6 +584,7 @@
 		627BABC0265019FF00CE9319 /* UI-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				62FBCA4026514D9100B5AE8A /* Helpers */,
 				627BABE126505C4C00CE9319 /* Scenes */,
 				627BABC2265019FF00CE9319 /* Info.plist */,
 			);
@@ -686,6 +689,14 @@
 			isa = PBXGroup;
 			children = (
 				62D13358264DBE5A00E0EE50 /* TestFactories.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		62FBCA4026514D9100B5AE8A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				62FBCA4126514DAE00B5AE8A /* UIViewControllerExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1168,6 +1179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62FBCA4226514DAE00B5AE8A /* UIViewControllerExtensions.swift in Sources */,
 				627BABDC26503AAB00CE9319 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
