@@ -2,10 +2,10 @@ import Foundation
 import Domain
 
 public final class SignUpPresenter {
-    private var alertView: AlertView
-    private var emailValidator: EmailValidator
-    private var addAccount: AddAccount
-    private var loadingView: LoadingView
+    private let alertView: AlertView
+    private let emailValidator: EmailValidator
+    private let addAccount: AddAccount
+    private let loadingView: LoadingView
     
     public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount, loadingView: LoadingView) {
         self.alertView = alertView
