@@ -64,6 +64,7 @@
 		62EED26426529B1A00F83D37 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D13352264DBCA600E0EE50 /* AddAccountSpy.swift */; };
 		62EED26526529DAB00F83D37 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625BB776264AD38200E9CDFD /* TestExtensions.swift */; };
 		62EED2682652A22A00F83D37 /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EED2672652A22A00F83D37 /* WeakVarProxy.swift */; };
+		62EED26D2652ABB600F83D37 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EED26C2652ABB500F83D37 /* Environment.swift */; };
 		62FBCA4226514DAE00B5AE8A /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBCA4126514DAE00B5AE8A /* UIViewControllerExtensions.swift */; };
 		62FBCA4426514F8300B5AE8A /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBCA4326514F8300B5AE8A /* Storyboarded.swift */; };
 		62FBCA53265159BF00B5AE8A /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62FBCA4A265159BF00B5AE8A /* Validation.framework */; };
@@ -373,6 +374,9 @@
 		62EED2602652977300F83D37 /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 		62EED26226529A7D00F83D37 /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
 		62EED2672652A22A00F83D37 /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
+		62EED26A2652AA9400F83D37 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		62EED26B2652AB1900F83D37 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		62EED26C2652ABB500F83D37 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		62FBCA4126514DAE00B5AE8A /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		62FBCA4326514F8300B5AE8A /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		62FBCA4A265159BF00B5AE8A /* Validation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -913,6 +917,16 @@
 			path = Proxies;
 			sourceTree = "<group>";
 		};
+		62EED2692652AA7D00F83D37 /* Env */ = {
+			isa = PBXGroup;
+			children = (
+				62EED26A2652AA9400F83D37 /* Debug.xcconfig */,
+				62EED26B2652AB1900F83D37 /* Release.xcconfig */,
+				62EED26C2652ABB500F83D37 /* Environment.swift */,
+			);
+			path = Env;
+			sourceTree = "<group>";
+		};
 		62FBCA4026514D9100B5AE8A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -943,6 +957,7 @@
 		62FBCB1626516B2700B5AE8A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				62EED2692652AA7D00F83D37 /* Env */,
 				62EED2662652A21400F83D37 /* Proxies */,
 				62EED25F2652976100F83D37 /* Composers */,
 				62FBCB6126516E7400B5AE8A /* Factories */,
@@ -958,10 +973,10 @@
 		62FBCB2D26516B2900B5AE8A /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
-				62FBCB3026516B2900B5AE8A /* Info.plist */,
+				62EED26226529A7D00F83D37 /* SignUpIntegrationTests.swift */,
 				62FBCB4626516C4100B5AE8A /* MainTests.swift */,
 				62FBCB4526516C4100B5AE8A /* MainTests-Bridging-Header.h */,
-				62EED26226529A7D00F83D37 /* SignUpIntegrationTests.swift */,
+				62FBCB3026516B2900B5AE8A /* Info.plist */,
 			);
 			path = MainTests;
 			sourceTree = "<group>";
@@ -1663,6 +1678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62EED25E265296A000F83D37 /* UseCaseFactory.swift in Sources */,
+				62EED26D2652ABB600F83D37 /* Environment.swift in Sources */,
 				62FBCB1826516B2700B5AE8A /* AppDelegate.swift in Sources */,
 				62FBCB1A26516B2700B5AE8A /* SceneDelegate.swift in Sources */,
 				62EED2682652A22A00F83D37 /* WeakVarProxy.swift in Sources */,
@@ -2569,6 +2585,7 @@
 		};
 		62FBCB3C26516B2900B5AE8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62EED26A2652AA9400F83D37 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -2588,6 +2605,7 @@
 		};
 		62FBCB3D26516B2900B5AE8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62EED26B2652AB1900F83D37 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
