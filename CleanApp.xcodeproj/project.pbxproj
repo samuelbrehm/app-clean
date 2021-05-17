@@ -65,6 +65,7 @@
 		62EED26526529DAB00F83D37 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625BB776264AD38200E9CDFD /* TestExtensions.swift */; };
 		62EED2682652A22A00F83D37 /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EED2672652A22A00F83D37 /* WeakVarProxy.swift */; };
 		62EED26D2652ABB600F83D37 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EED26C2652ABB500F83D37 /* Environment.swift */; };
+		62EED2732652BBBD00F83D37 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D13358264DBE5A00E0EE50 /* TestFactories.swift */; };
 		62FBCA4226514DAE00B5AE8A /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBCA4126514DAE00B5AE8A /* UIViewControllerExtensions.swift */; };
 		62FBCA4426514F8300B5AE8A /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBCA4326514F8300B5AE8A /* Storyboarded.swift */; };
 		62FBCA53265159BF00B5AE8A /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62FBCA4A265159BF00B5AE8A /* Validation.framework */; };
@@ -1700,6 +1701,7 @@
 			files = (
 				62EED26426529B1A00F83D37 /* AddAccountSpy.swift in Sources */,
 				62EED26326529A7D00F83D37 /* SignUpComposerTests.swift in Sources */,
+				62EED2732652BBBD00F83D37 /* TestFactories.swift in Sources */,
 				62FBCB4726516C4100B5AE8A /* MainTests.swift in Sources */,
 				62EED26526529DAB00F83D37 /* TestExtensions.swift in Sources */,
 			);
