@@ -6,7 +6,7 @@ class SignUpPresenterTests: XCTestCase {
     func test_signup_should_call_addAccount_with_correct_values() {
         let addAccountSpy = AddAccountSpy()
         let sut = makeSut(addAccount: addAccountSpy)
-        sut.signup(viewModel: makeSignUpViewModel())
+        sut.signUp(viewModel: makeSignUpViewModel())
         XCTAssertEqual(addAccountSpy.addAccountModel, makeAddAccountModel())
     }
     
@@ -16,10 +16,10 @@ class SignUpPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy, addAccount: addAccountSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, AlertViewModel(title: "Erro", message: "Algo inesperado aconteceu, tente novamente em alguns instantes"))
+            XCTAssertEqual(viewModel, AlertViewModel(title: "Erro", message: "Algo inesperado aconteceu, tente novamente em alguns instantes."))
             exp.fulfill()
         }
-        sut.signup(viewModel: makeSignUpViewModel())
+        sut.signUp(viewModel: makeSignUpViewModel())
         addAccountSpy.completeWithError(.unexpected)
         wait(for: [exp], timeout: 1)
     }
@@ -34,7 +34,7 @@ class SignUpPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel, LoadingViewModel(isLoading: true))
             exp.fulfill()
         }
-        sut.signup(viewModel: makeSignUpViewModel())
+        sut.signUp(viewModel: makeSignUpViewModel())
         wait(for: [exp], timeout: 1)
         
         let exp2 = expectation(description: "waiting")
@@ -55,7 +55,7 @@ class SignUpPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel, AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso."))
             exp.fulfill()
         }
-        sut.signup(viewModel: makeSignUpViewModel())
+        sut.signUp(viewModel: makeSignUpViewModel())
         addAccountSpy.completeWithAccount(makeAccountModel())
         wait(for: [exp], timeout: 1)
     }
@@ -64,7 +64,7 @@ class SignUpPresenterTests: XCTestCase {
         let validationSpy = ValidationSpy()
         let sut = makeSut(validation: validationSpy)
         let viewModel = makeSignUpViewModel()
-        sut.signup(viewModel: viewModel)
+        sut.signUp(viewModel: viewModel)
         XCTAssertTrue(NSDictionary(dictionary: validationSpy.data!).isEqual(to: viewModel.toJson()!))
     }
     
@@ -78,7 +78,7 @@ class SignUpPresenterTests: XCTestCase {
             exp.fulfill()
         }
         validationSpy.simulateError()
-        sut.signup(viewModel: makeSignUpViewModel())
+        sut.signUp(viewModel: makeSignUpViewModel())
         wait(for: [exp], timeout: 1)
     }
 }

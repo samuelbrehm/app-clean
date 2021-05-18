@@ -3,15 +3,14 @@ import Alamofire
 import Data
 
 public final class AlamofireAdapter: HttpPostClient {
-    private var session: Session
-    
+    private let session: Session
+
     public init(session: Session = .default) {
         self.session = session
     }
-    
+
     public func post(to url: URL, with data: Data?, completion: @escaping (Result<Data?, HttpError>) -> Void) {
-        let json = data?.toJson()
-        session.request(url, method: .post, parameters: json).responseData { dataResponse in
+        session.request(url, method: .post, parameters: data?.toJson(), encoding: JSONEncoding.default).responseData { dataResponse in
             guard let statusCode = dataResponse.response?.statusCode else { return completion(.failure(.noConnectivity)) }
             switch dataResponse.result {
             case .failure: completion(.failure(.noConnectivity))

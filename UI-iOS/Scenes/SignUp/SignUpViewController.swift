@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import Presentaion
 
-public final class SignUpViewController: UIViewController, Storyborded {
+public final class SignUpViewController: UIViewController, Storyboarded {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
@@ -15,7 +15,6 @@ public final class SignUpViewController: UIViewController, Storyborded {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        saveButton?.layer.cornerRadius = 5
         configure()
     }
     
