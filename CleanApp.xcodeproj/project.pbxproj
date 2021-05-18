@@ -69,6 +69,11 @@
 		627BABDC26503AAB00CE9319 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627BABDB26503AAB00CE9319 /* SignUpViewController.swift */; };
 		627BABDE26503AF000CE9319 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627BABDD26503AF000CE9319 /* SignUp.storyboard */; };
 		627BABE526505CA500CE9319 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627BABE426505CA500CE9319 /* TestExtensions.swift */; };
+		62A7082B2654394F005517F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A7082A2654394F005517F1 /* Images.xcassets */; };
+		62A7082D2654409C005517F1 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7082C2654409C005517F1 /* UIColorExtensions.swift */; };
+		62A7082F2654412A005517F1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7082E2654412A005517F1 /* Color.swift */; };
+		62A70832265442D6005517F1 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A70831265442D6005517F1 /* RoundedTextField.swift */; };
+		62A708342654474C005517F1 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A708332654474C005517F1 /* NavigationController.swift */; };
 		62D13347264DACEB00E0EE50 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D13346264DACEB00E0EE50 /* SignUpViewModel.swift */; };
 		62D1334D264DBC0200E0EE50 /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D1334C264DBC0200E0EE50 /* AlertViewSpy.swift */; };
 		62D13353264DBCA600E0EE50 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D13352264DBCA600E0EE50 /* AddAccountSpy.swift */; };
@@ -403,6 +408,11 @@
 		627BABDB26503AAB00CE9319 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		627BABDD26503AF000CE9319 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		627BABE426505CA500CE9319 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		62A7082A2654394F005517F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		62A7082C2654409C005517F1 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		62A7082E2654412A005517F1 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		62A70831265442D6005517F1 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		62A708332654474C005517F1 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		62D13346264DACEB00E0EE50 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		62D1334C264DBC0200E0EE50 /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
 		62D1334F264DBC6200E0EE50 /* EmailValidatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpy.swift; sourceTree = "<group>"; };
@@ -918,6 +928,8 @@
 			isa = PBXGroup;
 			children = (
 				62FBCA4026514D9100B5AE8A /* Helpers */,
+				62A7082926543930005517F1 /* Resources */,
+				62A708302654429F005517F1 /* Components */,
 				627BABE126505C4C00CE9319 /* Scenes */,
 				627BABC2265019FF00CE9319 /* Info.plist */,
 			);
@@ -973,6 +985,23 @@
 				627BABE426505CA500CE9319 /* TestExtensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		62A7082926543930005517F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				62A7082A2654394F005517F1 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		62A708302654429F005517F1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				62A70831265442D6005517F1 /* RoundedTextField.swift */,
+				62A708332654474C005517F1 /* NavigationController.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		62D13345264DACCA00E0EE50 /* SignUp */ = {
@@ -1062,8 +1091,10 @@
 		62FBCA4026514D9100B5AE8A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				62A7082C2654409C005517F1 /* UIColorExtensions.swift */,
 				62FBCA4126514DAE00B5AE8A /* UIViewControllerExtensions.swift */,
 				62FBCA4326514F8300B5AE8A /* Storyboarded.swift */,
+				62A7082E2654412A005517F1 /* Color.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1636,6 +1667,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				627BABDE26503AF000CE9319 /* SignUp.storyboard in Resources */,
+				62A7082B2654394F005517F1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1781,8 +1813,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				62FBCA4226514DAE00B5AE8A /* UIViewControllerExtensions.swift in Sources */,
+				62A70832265442D6005517F1 /* RoundedTextField.swift in Sources */,
 				627BABDC26503AAB00CE9319 /* SignUpViewController.swift in Sources */,
 				62FBCA4426514F8300B5AE8A /* Storyboarded.swift in Sources */,
+				62A7082F2654412A005517F1 /* Color.swift in Sources */,
+				62A708342654474C005517F1 /* NavigationController.swift in Sources */,
+				62A7082D2654409C005517F1 /* UIColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
