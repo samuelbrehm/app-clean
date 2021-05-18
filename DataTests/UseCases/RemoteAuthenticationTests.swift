@@ -3,18 +3,25 @@ import Domain
 import Data
 
 class RemoteAuthenticationTests: XCTestCase {
-    func test_add_should_call_httpClient_with_correct_url() throws {
+    func test_auth_should_call_httpClient_with_correct_url() throws {
         let url = makeURL()
         let (sut, httpClientSpy) = makeSut(url: url)
-        sut.auth(authenticationModel: makeAuthenticationModel())
+        sut.auth(authenticationModel: makeAuthenticationModel()) { _ in }
         XCTAssertEqual(httpClientSpy.urls, [url])
     }
     
-    func test_add_should_call_httpClient_with_correct_data() throws {
+    func test_auth_should_call_httpClient_with_correct_data() throws {
         let (sut, httpClientSpy) = makeSut()
         let authenticationModel = makeAuthenticationModel()
-        sut.auth(authenticationModel: authenticationModel)
+        sut.auth(authenticationModel: authenticationModel) { _ in }
         XCTAssertEqual(httpClientSpy.data, authenticationModel.toData())
+    }
+    
+    func test_auth_should_complete_with_error_if_client_complete_with_error() throws {
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut, completeWith: .failure(.unexpected), when: {
+            httpClientSpy.completeWithError(.noConnectivity)
+        })
     }
 }
 
@@ -25,5 +32,19 @@ extension RemoteAuthenticationTests {
         checkMemoryLeak(for: sut, file: file, line: line)
         checkMemoryLeak(for: httpClientSpy, file: file, line: line)
         return (sut, httpClientSpy)
+    }
+    
+    func expect(_ sut: RemoteAuthentication, completeWith expectedResult: Authentication.Result, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line)  {
+        let exp = expectation(description: "Waiting")
+        sut.auth(authenticationModel: makeAuthenticationModel()) { receivedResult in
+            switch (expectedResult, receivedResult) {
+            case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError, file: file, line: line)
+            case(.success(let expectedAccount), .success(let receivedAccount)): XCTAssertEqual(expectedAccount, receivedAccount)
+            default: XCTFail("Expected \(expectedResult) error received \(receivedResult) instead", file: file, line: line)
+            }
+            exp.fulfill()
+        }
+        action()
+        wait(for: [exp], timeout: 1)
     }
 }
