@@ -1,10 +1,3 @@
-//
-//  TestExtensions.swift
-//  DataTests
-//
-//  Created by Samuel Brehm on 11/05/21.
-//
-
 import Foundation
 import XCTest
 

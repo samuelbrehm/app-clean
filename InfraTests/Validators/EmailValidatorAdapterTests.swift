@@ -1,6 +1,5 @@
 import XCTest
-import Presentaion
-import Validation
+import Infra
 
 class EmailValidatorAdapterTests: XCTestCase {
     func test_invalid_emails() {

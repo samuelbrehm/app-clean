@@ -27,7 +27,7 @@
 		<key>Main.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>6</integer>
 		</dict>
 		<key>Presentaion.xcscheme_^#shared#^_</key>
 		<dict>
@@ -47,7 +47,7 @@
 		<key>Validation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>7</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -108,6 +108,16 @@
 			<true/>
 		</dict>
 		<key>6268B7132649B2C8009A3743</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>62FBCA49265159BF00B5AE8A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>62FBCA51265159BF00B5AE8A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
