@@ -25,6 +25,7 @@
 		622C3CBB2655356600E7F48E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C3CBA2655356600E7F48E /* LoginViewModel.swift */; };
 		622C3CBD265535CB00E7F48E /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C3CBC265535CB00E7F48E /* LoginPresenter.swift */; };
 		622C3CBF2655387B00E7F48E /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C3CBE2655387B00E7F48E /* AuthenticationSpy.swift */; };
+		622C3CC2265544BE00E7F48E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 622C3CC1265544BE00E7F48E /* Login.storyboard */; };
 		622F35752652F28D00221E0B /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F35742652F28D00221E0B /* Validation.swift */; };
 		622F35762652F2D100221E0B /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229784C264C5F8B00A475E4 /* EmailValidator.swift */; };
 		622F35772652F2F600221E0B /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D1334F264DBC6200E0EE50 /* EmailValidatorSpy.swift */; };
@@ -376,6 +377,7 @@
 		622C3CBA2655356600E7F48E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		622C3CBC265535CB00E7F48E /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		622C3CBE2655387B00E7F48E /* AuthenticationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
+		622C3CC1265544BE00E7F48E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		622F35742652F28D00221E0B /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		622F35782652FD9700221E0B /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
 		622F3582265302BD00221E0B /* RequiredFieldValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredFieldValidationTests.swift; sourceTree = "<group>"; };
@@ -721,6 +723,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		622C3CC0265544AA00E7F48E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				622C3CC1265544BE00E7F48E /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		622F357A2652FDFB00221E0B /* Validators */ = {
 			isa = PBXGroup;
 			children = (
@@ -1002,6 +1012,7 @@
 		627BABE126505C4C00CE9319 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				622C3CC0265544AA00E7F48E /* Login */,
 				627BABDF26505BFC00CE9319 /* SignUp */,
 			);
 			path = Scenes;
@@ -1705,6 +1716,7 @@
 			files = (
 				627BABDE26503AF000CE9319 /* SignUp.storyboard in Resources */,
 				62A7082B2654394F005517F1 /* Images.xcassets in Resources */,
+				622C3CC2265544BE00E7F48E /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
