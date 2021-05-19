@@ -99,6 +99,7 @@
 		62E9BB22265581D5007E6DB4 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E9BB21265581D5007E6DB4 /* Welcome.storyboard */; };
 		62E9BB25265588E4007E6DB4 /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9BB24265588E4007E6DB4 /* WelcomeViewControllerTests.swift */; };
 		62E9BB2726558AF4007E6DB4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9BB2626558AF4007E6DB4 /* WelcomeViewController.swift */; };
+		62E9BB292655AC57007E6DB4 /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9BB282655AC57007E6DB4 /* WelcomeRouterTests.swift */; };
 		62EED25E265296A000F83D37 /* RemoteAddAccountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EED25D265296A000F83D37 /* RemoteAddAccountFactory.swift */; };
 		62EED2612652977300F83D37 /* SignUpControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EED2602652977300F83D37 /* SignUpControllerFactory.swift */; };
 		62EED26326529A7D00F83D37 /* SignUpControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EED26226529A7D00F83D37 /* SignUpControllerFactoryTests.swift */; };
@@ -453,6 +454,7 @@
 		62E9BB21265581D5007E6DB4 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		62E9BB24265588E4007E6DB4 /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
 		62E9BB2626558AF4007E6DB4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		62E9BB282655AC57007E6DB4 /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 		62EED25D265296A000F83D37 /* RemoteAddAccountFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountFactory.swift; sourceTree = "<group>"; };
 		62EED2602652977300F83D37 /* SignUpControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpControllerFactory.swift; sourceTree = "<group>"; };
 		62EED26226529A7D00F83D37 /* SignUpControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpControllerFactoryTests.swift; sourceTree = "<group>"; };
@@ -1146,6 +1148,7 @@
 			isa = PBXGroup;
 			children = (
 				62E9BB24265588E4007E6DB4 /* WelcomeViewControllerTests.swift */,
+				62E9BB282655AC57007E6DB4 /* WelcomeRouterTests.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1934,6 +1937,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E9BB292655AC57007E6DB4 /* WelcomeRouterTests.swift in Sources */,
 				622C3CC52655462400E7F48E /* LoginViewControllerTests.swift in Sources */,
 				627BABCD26501A0000CE9319 /* SignUpViewControllerTests.swift in Sources */,
 				62E9BB25265588E4007E6DB4 /* WelcomeViewControllerTests.swift in Sources */,
