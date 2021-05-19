@@ -94,7 +94,7 @@
 		62E158F9264D9BF200B6C4CE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E158F8264D9BF200B6C4CE /* LoadingView.swift */; };
 		62EED25E265296A000F83D37 /* RemoteAddAccountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EED25D265296A000F83D37 /* RemoteAddAccountFactory.swift */; };
 		62EED2612652977300F83D37 /* SignUpControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EED2602652977300F83D37 /* SignUpControllerFactory.swift */; };
-		62EED26326529A7D00F83D37 /* SignUpFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EED26226529A7D00F83D37 /* SignUpFactoryTests.swift */; };
+		62EED26326529A7D00F83D37 /* SignUpControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EED26226529A7D00F83D37 /* SignUpControllerFactoryTests.swift */; };
 		62EED26426529B1A00F83D37 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D13352264DBCA600E0EE50 /* AddAccountSpy.swift */; };
 		62EED26526529DAB00F83D37 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625BB776264AD38200E9CDFD /* TestExtensions.swift */; };
 		62EED2682652A22A00F83D37 /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EED2672652A22A00F83D37 /* WeakVarProxy.swift */; };
@@ -442,7 +442,7 @@
 		62E158F8264D9BF200B6C4CE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		62EED25D265296A000F83D37 /* RemoteAddAccountFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountFactory.swift; sourceTree = "<group>"; };
 		62EED2602652977300F83D37 /* SignUpControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpControllerFactory.swift; sourceTree = "<group>"; };
-		62EED26226529A7D00F83D37 /* SignUpFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactoryTests.swift; sourceTree = "<group>"; };
+		62EED26226529A7D00F83D37 /* SignUpControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpControllerFactoryTests.swift; sourceTree = "<group>"; };
 		62EED2672652A22A00F83D37 /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
 		62EED26A2652AA9400F83D37 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		62EED26B2652AB1900F83D37 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -1134,12 +1134,12 @@
 			path = Env;
 			sourceTree = "<group>";
 		};
-		62EED2722652B8A200F83D37 /* Composers */ = {
+		62EED2722652B8A200F83D37 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				62EED26226529A7D00F83D37 /* SignUpFactoryTests.swift */,
+				62EED26226529A7D00F83D37 /* SignUpControllerFactoryTests.swift */,
 			);
-			path = Composers;
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		62EED2742652E07C00F83D37 /* Decorators */ = {
@@ -1200,7 +1200,7 @@
 		62FBCB2D26516B2900B5AE8A /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
-				62EED2722652B8A200F83D37 /* Composers */,
+				62EED2722652B8A200F83D37 /* Factories */,
 				62FBCB4626516C4100B5AE8A /* MainTests.swift */,
 				62FBCB4526516C4100B5AE8A /* MainTests-Bridging-Header.h */,
 				62FBCB3026516B2900B5AE8A /* Info.plist */,
@@ -1951,7 +1951,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62EED26426529B1A00F83D37 /* AddAccountSpy.swift in Sources */,
-				62EED26326529A7D00F83D37 /* SignUpFactoryTests.swift in Sources */,
+				62EED26326529A7D00F83D37 /* SignUpControllerFactoryTests.swift in Sources */,
 				62EED2732652BBBD00F83D37 /* TestFactories.swift in Sources */,
 				62FBCB4726516C4100B5AE8A /* MainTests.swift in Sources */,
 				620CE3292653EAE700A44E41 /* EmailValidatorSpy.swift in Sources */,
