@@ -10,7 +10,7 @@
         <!--Login-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="Y6W-OH-hqX" userLabel="Login" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="Y6W-OH-hqX" userLabel="Login" customClass="LoginViewController" customModule="UI_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fjZ-au-9ZI">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fjZ-au-9ZI" userLabel="Loading Indicator">
                                 <rect key="frame" x="188.5" y="514" width="37" height="37"/>
                                 <color key="color" red="0.53333333333333333" green="0.011764705882352941" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
@@ -94,10 +94,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="OAt-vH-g4I" id="k2g-qA-xlG"/>
-                        <outlet property="loadingIndicator" destination="fjZ-au-9ZI" id="mD5-1e-X5S"/>
-                        <outlet property="passwordTextField" destination="oIJ-Up-v6J" id="Xuu-dP-Wi0"/>
-                        <outlet property="saveButton" destination="jzr-Qe-pqb" id="bVf-CO-ub8"/>
+                        <outlet property="loadingIndicator" destination="fjZ-au-9ZI" id="ule-5t-pFy"/>
+                        <outlet property="loginButton" destination="jzr-Qe-pqb" id="EBB-cI-IgW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

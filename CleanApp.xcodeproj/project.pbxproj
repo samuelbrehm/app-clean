@@ -26,6 +26,8 @@
 		622C3CBD265535CB00E7F48E /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C3CBC265535CB00E7F48E /* LoginPresenter.swift */; };
 		622C3CBF2655387B00E7F48E /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C3CBE2655387B00E7F48E /* AuthenticationSpy.swift */; };
 		622C3CC2265544BE00E7F48E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 622C3CC1265544BE00E7F48E /* Login.storyboard */; };
+		622C3CC52655462400E7F48E /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C3CC42655462400E7F48E /* LoginViewControllerTests.swift */; };
+		622C3CC72655477600E7F48E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C3CC62655477600E7F48E /* LoginViewController.swift */; };
 		622F35752652F28D00221E0B /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F35742652F28D00221E0B /* Validation.swift */; };
 		622F35762652F2D100221E0B /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229784C264C5F8B00A475E4 /* EmailValidator.swift */; };
 		622F35772652F2F600221E0B /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D1334F264DBC6200E0EE50 /* EmailValidatorSpy.swift */; };
@@ -378,6 +380,8 @@
 		622C3CBC265535CB00E7F48E /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		622C3CBE2655387B00E7F48E /* AuthenticationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 		622C3CC1265544BE00E7F48E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		622C3CC42655462400E7F48E /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		622C3CC62655477600E7F48E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		622F35742652F28D00221E0B /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		622F35782652FD9700221E0B /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
 		622F3582265302BD00221E0B /* RequiredFieldValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredFieldValidationTests.swift; sourceTree = "<group>"; };
@@ -726,7 +730,16 @@
 		622C3CC0265544AA00E7F48E /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				622C3CC62655477600E7F48E /* LoginViewController.swift */,
 				622C3CC1265544BE00E7F48E /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		622C3CC3265545CE00E7F48E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				622C3CC42655462400E7F48E /* LoginViewControllerTests.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1021,6 +1034,7 @@
 		627BABE226505C5E00CE9319 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				622C3CC3265545CE00E7F48E /* Login */,
 				627BABE026505C1600CE9319 /* SignUp */,
 			);
 			path = Scenes;
@@ -1872,6 +1886,7 @@
 				62A70832265442D6005517F1 /* RoundedTextField.swift in Sources */,
 				627BABDC26503AAB00CE9319 /* SignUpViewController.swift in Sources */,
 				62FBCA4426514F8300B5AE8A /* Storyboarded.swift in Sources */,
+				622C3CC72655477600E7F48E /* LoginViewController.swift in Sources */,
 				62A7082F2654412A005517F1 /* Color.swift in Sources */,
 				62A708342654474C005517F1 /* NavigationController.swift in Sources */,
 				62A7082D2654409C005517F1 /* UIColorExtensions.swift in Sources */,
@@ -1882,6 +1897,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				622C3CC52655462400E7F48E /* LoginViewControllerTests.swift in Sources */,
 				627BABCD26501A0000CE9319 /* SignUpViewControllerTests.swift in Sources */,
 				627BABE526505CA500CE9319 /* TestExtensions.swift in Sources */,
 			);
