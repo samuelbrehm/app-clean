@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		620BBF482656878300CFD2AB /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620BBF462656876200CFD2AB /* WelcomeRouter.swift */; };
 		620CE3292653EAE700A44E41 /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D1334F264DBC6200E0EE50 /* EmailValidatorSpy.swift */; };
 		620CE32B2654304C00A44E41 /* ApiUrlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620CE32A2654304C00A44E41 /* ApiUrlFactory.swift */; };
 		620CE32E2654311400A44E41 /* AlamofireAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620CE32D2654311400A44E41 /* AlamofireAdapterFactory.swift */; };
@@ -367,6 +368,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		620BBF462656876200CFD2AB /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		620CE32A2654304C00A44E41 /* ApiUrlFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrlFactory.swift; sourceTree = "<group>"; };
 		620CE32D2654311400A44E41 /* AlamofireAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactory.swift; sourceTree = "<group>"; };
 		620CE331265432B400A44E41 /* EmailValidatorAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterFactory.swift; sourceTree = "<group>"; };
@@ -1138,6 +1140,7 @@
 		62E9BB202655819A007E6DB4 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				620BBF462656876200CFD2AB /* WelcomeRouter.swift */,
 				62E9BB21265581D5007E6DB4 /* Welcome.storyboard */,
 				62E9BB2626558AF4007E6DB4 /* WelcomeViewController.swift */,
 			);
@@ -1924,6 +1927,7 @@
 				62E9BB2726558AF4007E6DB4 /* WelcomeViewController.swift in Sources */,
 				62FBCA4226514DAE00B5AE8A /* UIViewControllerExtensions.swift in Sources */,
 				62A70832265442D6005517F1 /* RoundedTextField.swift in Sources */,
+				620BBF482656878300CFD2AB /* WelcomeRouter.swift in Sources */,
 				627BABDC26503AAB00CE9319 /* SignUpViewController.swift in Sources */,
 				62FBCA4426514F8300B5AE8A /* Storyboarded.swift in Sources */,
 				622C3CC72655477600E7F48E /* LoginViewController.swift in Sources */,
