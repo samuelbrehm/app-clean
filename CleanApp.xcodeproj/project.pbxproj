@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		620BBF482656878300CFD2AB /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620BBF462656876200CFD2AB /* WelcomeRouter.swift */; };
+		620BBF4A2656997000CFD2AB /* WelcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620BBF492656997000CFD2AB /* WelcomeControllerFactory.swift */; };
 		620CE3292653EAE700A44E41 /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D1334F264DBC6200E0EE50 /* EmailValidatorSpy.swift */; };
 		620CE32B2654304C00A44E41 /* ApiUrlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620CE32A2654304C00A44E41 /* ApiUrlFactory.swift */; };
 		620CE32E2654311400A44E41 /* AlamofireAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620CE32D2654311400A44E41 /* AlamofireAdapterFactory.swift */; };
@@ -369,6 +370,7 @@
 
 /* Begin PBXFileReference section */
 		620BBF462656876200CFD2AB /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		620BBF492656997000CFD2AB /* WelcomeControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeControllerFactory.swift; sourceTree = "<group>"; };
 		620CE32A2654304C00A44E41 /* ApiUrlFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrlFactory.swift; sourceTree = "<group>"; };
 		620CE32D2654311400A44E41 /* AlamofireAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactory.swift; sourceTree = "<group>"; };
 		620CE331265432B400A44E41 /* EmailValidatorAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterFactory.swift; sourceTree = "<group>"; };
@@ -640,6 +642,7 @@
 			children = (
 				62EED2602652977300F83D37 /* SignUpControllerFactory.swift */,
 				62E9BB1D26557A3B007E6DB4 /* LoginControllerFactory.swift */,
+				620BBF492656997000CFD2AB /* WelcomeControllerFactory.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1983,6 +1986,7 @@
 				620CE332265432B400A44E41 /* EmailValidatorAdapterFactory.swift in Sources */,
 				62EED25E265296A000F83D37 /* RemoteAddAccountFactory.swift in Sources */,
 				62EED2762652E08A00F83D37 /* MainQueueDispatchDecorator.swift in Sources */,
+				620BBF4A2656997000CFD2AB /* WelcomeControllerFactory.swift in Sources */,
 				62EED26D2652ABB600F83D37 /* Environment.swift in Sources */,
 				620CE32B2654304C00A44E41 /* ApiUrlFactory.swift in Sources */,
 				62E9BB1C26555E51007E6DB4 /* RemoteAuthenticationFactory.swift in Sources */,
