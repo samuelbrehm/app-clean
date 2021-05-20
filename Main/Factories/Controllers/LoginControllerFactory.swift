@@ -5,10 +5,10 @@ import Validation
 import Domain
 
 public func makeLoginController() -> LoginViewController {
-    return makeLoginControllerwith(authentication: makeRemoteAuthentication())
+    return makeLoginControllerWith(authentication: makeRemoteAuthentication())
 }
 
-public func makeLoginControllerwith(authentication: Authentication) -> LoginViewController {
+public func makeLoginControllerWith(authentication: Authentication) -> LoginViewController {
     let controller = LoginViewController.instantiate()
     let validationComposite = ValidationComposite(validations: makeLoginValidations())
     let presenter = LoginPresenter(validation: validationComposite, alertView: WeakVarProxy(controller), authentication: authentication, loadingView: WeakVarProxy(controller))
