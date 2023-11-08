@@ -15,7 +15,9 @@ public final class WelcomeRouter {
         nav.pushViewController(loginFactory())
     }
     
-    public func gotoSignUp() {
-        nav.pushViewController(signUpFactory())
+    public func gotoSignUp(id: String) {
+        let signUpTest = signUpFactory()
+        signUpTest.setId(s: id)
+        nav.pushViewController(signUpTest)
     }
 }

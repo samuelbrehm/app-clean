@@ -24,6 +24,8 @@ public final class NavigationController: UINavigationController {
         navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationBar.isTranslucent = false
         navigationBar.barStyle = .black
+       setNavigationBarHidden(false, animated: true)
+       navigationBar.isHidden = false
     }
     
     public func setRootViewController(_ viewController: UIViewController) {

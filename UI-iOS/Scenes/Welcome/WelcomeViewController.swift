@@ -6,7 +6,7 @@ public final class WelcomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var signUpButton: UIButton!
     
     public var login: (() -> Void)?
-    public var signUp: (() -> Void)?
+    public var signUp: ((String) -> Void)?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,6 @@ public final class WelcomeViewController: UIViewController, Storyboarded {
     }
     
     @objc private func signUpButtonTapped() {
-        signUp?()
+        signUp?("1")
     }
 }

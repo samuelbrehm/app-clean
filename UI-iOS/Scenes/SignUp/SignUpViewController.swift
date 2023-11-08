@@ -10,6 +10,11 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
     
+    var idReceived: String = ""
+    
+    public func setId(s: String) {
+        self.idReceived = s
+    }
     
     public var signUp: ((SignUpRequest) -> Void)?
     
@@ -19,7 +24,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     }
     
     private func configure() {
-        title = "4Dev"
+        title = "4Dev - \(self.idReceived)"
         saveButton?.layer.cornerRadius = 5
         saveButton?.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
         hideKeyboardOnTap()
